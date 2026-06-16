@@ -1,0 +1,589 @@
+[
+    {
+        "id": "418ad5cb5a2fd8b2",
+        "type": "tab",
+        "label": "Fluxo 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "dashboard_tab_careplus",
+        "type": "ui_tab",
+        "name": "CarePlus",
+        "icon": "dashboard"
+    },
+    {
+        "id": "dashboard_group_careplus",
+        "type": "ui_group",
+        "name": "Vitais",
+        "tab": "dashboard_tab_careplus",
+        "order": 1,
+        "disp": true,
+        "width": "12"
+    },
+    {
+        "id": "mqtt_broker_config",
+        "type": "mqtt-broker",
+        "name": "HiveMQ",
+        "broker": "9ca03c36523a4fbaa8ffdfb128beef7b.s1.eu.hivemq.cloud",
+        "port": "8883",
+        "clientid": "NodeRedCarePlus",
+        "usetls": true,
+        "keepalive": "60",
+        "cleansession": true
+    },
+    {
+        "id": "ebea56673060cc93",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "tab_debug",
+        "type": "ui_tab",
+        "name": "CarePlus Debug",
+        "icon": "dashboard"
+    },
+    {
+        "id": "group_debug",
+        "type": "ui_group",
+        "name": "Dados",
+        "tab": "tab_debug",
+        "order": 1,
+        "disp": true,
+        "width": "12"
+    },
+    {
+        "id": "mqtt_broker_debug",
+        "type": "mqtt-broker",
+        "name": "HiveMQ Público",
+        "broker": "broker.hivemq.com",
+        "port": "1883",
+        "clientid": "careplus_debug",
+        "usetls": false,
+        "keepalive": "60",
+        "cleansession": true
+    },
+    {
+        "id": "a73f464341547eb1",
+        "type": "tls-config",
+        "name": "",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "",
+        "servername": "",
+        "verifyservercert": true,
+        "alpnprotocol": ""
+    },
+    {
+        "id": "a38a687bbdb771b0",
+        "type": "tls-config",
+        "name": "",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "",
+        "servername": "",
+        "verifyservercert": true,
+        "alpnprotocol": ""
+    },
+    {
+        "id": "mqtt_broker_simple",
+        "type": "mqtt-broker",
+        "name": "broker.hivemq.com",
+        "broker": "9ca03c36523a4fbaa8ffdfb128beef7b.s1.eu.hivemq.cloud",
+        "port": "8883",
+        "tls": "a73f464341547eb1",
+        "clientid": "careplus_simple",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": 4,
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "mqtt_broker_payload",
+        "type": "mqtt-broker",
+        "name": "broker.hivemq.com",
+        "broker": "9ca03c36523a4fbaa8ffdfb128beef7b.s1.eu.hivemq.cloud",
+        "port": "8883",
+        "tls": "a38a687bbdb771b0",
+        "clientid": "careplus_payload",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": 4,
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "ed3a5ccec84ca80d",
+        "type": "influxdb",
+        "hostname": "127.0.0.1",
+        "port": 8086,
+        "protocol": "http",
+        "database": "database",
+        "name": "InfluxDB CarePlus",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "2.0",
+        "url": "https://us-east-1-1.aws.cloud2.influxdata.com",
+        "timeout": 10,
+        "rejectUnauthorized": true
+    },
+    {
+        "id": "f09be72fdb44ea3f",
+        "type": "tls-config",
+        "name": "",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "",
+        "servername": "",
+        "verifyservercert": true,
+        "alpnprotocol": ""
+    },
+    {
+        "id": "89f0e86bb20bdca5",
+        "type": "influxdb",
+        "hostname": "127.0.0.1",
+        "port": 8086,
+        "protocol": "http",
+        "database": "database",
+        "name": "CarePlus",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "2.0",
+        "url": "https://us-east-1-1.aws.cloud2.influxdata.com",
+        "timeout": 10,
+        "rejectUnauthorized": true
+    },
+    {
+        "id": "21e44ca2289d8d9f",
+        "type": "tls-config",
+        "name": "",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "",
+        "servername": "",
+        "verifyservercert": false,
+        "alpnprotocol": ""
+    },
+    {
+        "id": "mqtt_broker_influx",
+        "type": "mqtt-broker",
+        "name": "broker.hivemq.com",
+        "broker": "9ca03c36523a4fbaa8ffdfb128beef7b.s1.eu.hivemq.cloud",
+        "port": "8883",
+        "tls": "f09be72fdb44ea3f",
+        "clientid": "careplus_influx",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": 4,
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "mqtt_broker_fix",
+        "type": "mqtt-broker",
+        "name": "broker.hivemq.com",
+        "broker": "9ca03c36523a4fbaa8ffdfb128beef7b.s1.eu.hivemq.cloud",
+        "port": "8883",
+        "tls": "21e44ca2289d8d9f",
+        "clientid": "careplus_fix",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": 4,
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "mqtt_config",
+        "type": "mqtt-broker",
+        "name": "HiveMQ",
+        "broker": "9ca03c36523a4fbaa8ffdfb128beef7b.s1.eu.hivemq.cloud",
+        "port": "8883",
+        "tls": "",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": "4",
+        "keepalive": 15,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "influx_cfg",
+        "type": "influxdb",
+        "hostname": "",
+        "port": "",
+        "protocol": "http",
+        "database": "",
+        "name": "CarePlus",
+        "usetls": true,
+        "tls": "",
+        "influxdbVersion": "2.0",
+        "url": "https://us-east-1-1.aws.cloud2.influxdata.com",
+        "timeout": 10,
+        "rejectUnauthorized": true
+    },
+    {
+        "id": "4196c30952dbf5ff",
+        "type": "influxdb",
+        "hostname": "127.0.0.1",
+        "port": 8086,
+        "protocol": "http",
+        "database": "database",
+        "name": "",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "2.0",
+        "url": "https://us-east-1-1.aws.cloud2.influxdata.com",
+        "timeout": 10,
+        "rejectUnauthorized": true
+    },
+    {
+        "id": "mqtt_bpm",
+        "type": "mqtt in",
+        "z": "418ad5cb5a2fd8b2",
+        "name": "MQTT BPM",
+        "topic": "careplus/bpm",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "mqtt_config",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 310,
+        "y": 220,
+        "wires": [
+            [
+                "json_bpm"
+            ]
+        ]
+    },
+    {
+        "id": "json_bpm",
+        "type": "json",
+        "z": "418ad5cb5a2fd8b2",
+        "name": "JSON BPM",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 510,
+        "y": 220,
+        "wires": [
+            [
+                "func_bpm"
+            ]
+        ]
+    },
+    {
+        "id": "func_bpm",
+        "type": "function",
+        "z": "418ad5cb5a2fd8b2",
+        "name": "Formatar BPM",
+        "func": "let dados = JSON.parse(msg.payload);\n\nmsg.payload = {\n    batimentos: Number(dados.batimentos)\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 800,
+        "y": 220,
+        "wires": [
+            [
+                "33336c740f4ad15b",
+                "860d1aa5089c71fc"
+            ]
+        ]
+    },
+    {
+        "id": "mqtt_temp",
+        "type": "mqtt in",
+        "z": "418ad5cb5a2fd8b2",
+        "name": "MQTT TEMP",
+        "topic": "careplus/temp",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "mqtt_config",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 310,
+        "y": 340,
+        "wires": [
+            [
+                "json_temp"
+            ]
+        ]
+    },
+    {
+        "id": "json_temp",
+        "type": "json",
+        "z": "418ad5cb5a2fd8b2",
+        "name": "JSON TEMP",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 510,
+        "y": 340,
+        "wires": [
+            [
+                "func_temp"
+            ]
+        ]
+    },
+    {
+        "id": "func_temp",
+        "type": "function",
+        "z": "418ad5cb5a2fd8b2",
+        "name": "Formatar Temp",
+        "func": "let dados = JSON.parse(msg.payload);\n\nmsg.payload = {\n    temperatura: Number(dados.temperatura),\n    umidade: Number(dados.umidade)\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 800,
+        "y": 340,
+        "wires": [
+            [
+                "33336c740f4ad15b",
+                "71d395cdc12d02b1"
+            ]
+        ]
+    },
+    {
+        "id": "33336c740f4ad15b",
+        "type": "influxdb out",
+        "z": "418ad5cb5a2fd8b2",
+        "influxdb": "4196c30952dbf5ff",
+        "name": "Influx",
+        "measurement": "careplus",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "EngSoft",
+        "bucket": "careplus",
+        "x": 1030,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "860d1aa5089c71fc",
+        "type": "debug",
+        "z": "418ad5cb5a2fd8b2",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "71d395cdc12d02b1",
+        "type": "debug",
+        "z": "418ad5cb5a2fd8b2",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "758f9eb9a675ee95",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-dashboard": "3.6.6",
+            "node-red-contrib-influxdb": "0.7.0"
+        }
+    }
+]
