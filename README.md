@@ -156,26 +156,6 @@ Configurar:
 
 ---
 
-# Evidências
-
-## Comunicação MQTT
-
-Inserir screenshot do Node-RED recebendo mensagens MQTT.
-
-## Armazenamento no InfluxDB
-
-Inserir screenshot do Data Explorer mostrando:
-
-* batimentos
-* temperatura
-* umidade
-
-## Simulação Wokwi
-
-Inserir screenshot do circuito.
-
----
-
 # Resultados Obtidos
 
 O sistema foi capaz de:
@@ -189,9 +169,7 @@ O sistema foi capaz de:
 
 # Vídeo Demonstrativo
 
-Inserir link do YouTube:
-
-https://youtube.com/SEU_VIDEO
+https://youtu.be/wFqsG6c__Ls?si=UXlRj9jwt6nwLznu
 
 ---
 
